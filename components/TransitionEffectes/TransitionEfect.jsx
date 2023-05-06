@@ -8,7 +8,7 @@ const TransitionEfect = () => {
      initial={{x:"100%",width:"100%"}}
      animate={{x:"0%",width:"0%"}}
      transition={{duration:.8,ease:"easeInOut"}}
-     style={{ backgroundImage:`url(https://res.cloudinary.com/dqgeth8jx/image/upload/v1681551339/portfolio/jithlogo.67171ca21e0f39829edf_c1oq10.webp) `, backgroundRepeat: "no-repeat" ,backgroundPosition:"center", backgroundSize: "200px 180px"  }}
+     style={{ backgroundImage:`url(https://res.cloudinary.com/dqgeth8jx/image/upload/v1681551339/portfolio/jithlogo.67171ca21e0f39829edf_c1oq10.webp) `, backgroundRepeat: "no-repeat" ,backgroundPosition:"center", backgroundSize: "200px 200px"  }}
    
   
      />
