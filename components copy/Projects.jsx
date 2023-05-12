@@ -1,9 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
 import Image from "next/image"
-import SlideUp from "./SlideUp"
 import Link from "next/link"
 import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs"
 import { useTheme } from "next-themes"
+import SlideUp from "./SlideUp"
+import TransitionEfect from "../components/TransitionEffectes/TransitionEfect"
+
 const ProjectDtl=[
   {name:"Budget Store",
   imag:"https://res.cloudinary.com/dqgeth8jx/image/upload/v1681715501/portfolio/Screenshot-2023-04-15-195404_osfrtk.webp",  
@@ -63,6 +65,7 @@ git:"https://github.com/jithstephen13/LadyQueen"},
 const Projects = () => {
   const { systemTheme, theme, setTheme } = useTheme()
   const currentTheme = theme === "system" ? systemTheme : theme
+
   return (
     <section id="projects">
       <div className="my-12 pb-12 md:pt-16 md:pb-48">
@@ -76,7 +79,7 @@ const Projects = () => {
 
 ProjectDtl.map((item,idx)=>{
   return( 
-  <SlideUp key={idx} offset="-300px 0px -300px 0px">
+  <SlideUp key={idx} >
   <div className={`flex flex-col  animate-slideUpCubiBezier animation-delay-4 md:space-x-12 border-2 border-black rounded-lg shadow-lg shadow-white p-6 ${idx%2!=0 ? "mt-20":""} `}>
   <div className="text-center ">
 
@@ -93,14 +96,14 @@ ProjectDtl.map((item,idx)=>{
      
       <p className="mb-4">{item.dsc}</p>
       <div className="flex flex-wrap gap-2 mb-6">
-        <span className="font-bold">Tech Stack: </span>
+        <span className="font-bold   text-purple-700">Tech Stack : </span>
       {
-        item.tech.map((item,itn)=><button key={Math.random()} className="bg-black text-white h-8 p-2">{item}</button>)
+        item.tech.map((item,itn)=><button key={Math.random()} className="bg-black rounded-md flex justify-center items-center text-white h-8 p-2">{item}</button>)
       }
 
      
 </div>
-<p><span className="font-bold mb-4">Area of Responsibility:</span>{item.Responsibility}</p>
+<p><span className="font-bold mb-4   text-purple-700">Area of Responsibility : </span>{item.Responsibility}</p>
 
 <div className={`flex flex-row justify-center align-bottom space-x-4 mt-4 ${idx===3? "mb-12":""} `} >
                   <Link href={item.git} target="_blank">

@@ -10,7 +10,7 @@ export const LinkCompo = (item) => {
                               to={`${item.page}`}
                               
                     className={
-                      "block lg:inline-block text-white  hover:text-neutral-500 dark:text-neutral-100"
+                      "block lg:inline-block text-white ml-6 hover:text-neutral-500 dark:text-neutral-100"
                     }
                     activeClass="active"
                     spy={true}

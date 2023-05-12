@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
+    "@motionone/utils": "^10.15.1",
     "emailjs": "^4.0.1",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",

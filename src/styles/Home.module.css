@@ -276,3 +276,33 @@
     transform: rotate(0deg);
   }
 }
+
+.parallax {
+  overflow: hidden;
+  gap: 10px;
+  line-height: 0.8;
+  margin: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+  
+}
+
+.parallax .scroller {
+  weight: 600;
+  text-transform: uppercase;
+  height: 64px;
+  display: flex;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+.parallax span {
+  
+  margin-right: 30px;
+  
+ 
+}
+
+
