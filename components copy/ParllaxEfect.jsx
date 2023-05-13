@@ -29,7 +29,7 @@ function ParallaxEfect({ children, baseVelocity = 100 }) {
    * have to replace for wrapping that works for you or dynamically
    * calculate
    */
-  const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
+  const x = useTransform(baseX, (v) => `${wrap(-5, -90, v)}%`);
 
   const directionFactor = useRef(1);
   useAnimationFrame((t, delta) => {
