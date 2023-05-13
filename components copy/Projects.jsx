@@ -10,7 +10,7 @@ const ProjectDtl=[
   {name:"Budget Store",
   imag:"https://res.cloudinary.com/dqgeth8jx/image/upload/v1681715501/portfolio/Screenshot-2023-04-15-195404_osfrtk.webp",  
   dsc:"Budget Store is a web-based platform that enables users to find and rent products online with ease. It offers a secure payment gateway to ensure customers' information and transactions are protected, as well as a user-friendly interface",
-  tech:["HTML" , "JavaSript" , "CSS" , "React" , "Chakra UI","Redux toolkit"," Tailwind CSS"],
+  tech:["HTML" , "JavaSript" , "CSS" , "React" , "Chakra UI","Redux toolkit"," Tailwind CSS","Stripe","Three Js"],
   Responsibility:"Home Page, Admin page, Login/Sign up Page,Product page, Cart Page Navbar, Footer",
   dep:"https://budget-store.netlify.app/",
   git:"https://github.com/jithstephen13/BudgetStore"},
