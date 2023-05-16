@@ -105,10 +105,10 @@ const Contact = () => {
                         </form>
         </div>
          <div className="flex flex-col justify-center items-center text-white">
-         <a href = "mailto: jithstephen96@gmail.com"> <div className=" flex"> <Image  alt="pro"
+         <a href = "mailto: jithstephen96@gmail.com"> <div className=" flex gap-2"> <Image  alt="pro"
             width={25}
             height={25} src="https://res.cloudinary.com/dqgeth8jx/image/upload/v1681718204/portfolio/email_rnmp9t.png" /> <p>Send Email</p></div> </a>
-         <a href="tel:+919526272502">  <div className=" flex"> <Image  alt="pro"
+         <a href="tel:+919526272502">  <div className=" flex  gap-2"> <Image  alt="pro"
             width={25}
             height={25} src="https://res.cloudinary.com/dqgeth8jx/image/upload/v1681718204/portfolio/telephone_kclste.png" /> <p>+91 9526272502</p></div></a>
          <p>wayanad,kerala</p>
