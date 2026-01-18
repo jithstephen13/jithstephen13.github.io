@@ -35,11 +35,11 @@ const contact = () => {
           shininess: 66.00,
           waveHeight: 17.50,
           waveSpeed: 1.20,
-          zoom: 0.84 
+          zoom: 0.84
         })
       );
     }
-   
+
   }, [vantaEffect]);
 
   const handlechenge = (e) => {
@@ -68,7 +68,7 @@ const contact = () => {
          console.log(result)
         },
         (error) => {
-         
+
         }
       );
 
@@ -82,7 +82,7 @@ const contact = () => {
     <Head>
       <title>Jith Stephen</title>
       <meta name="description" content="jith stephen portfolio" />
-      
+
     </Head>
     <main  >
     <TransitionEfect/>
@@ -123,13 +123,13 @@ const contact = () => {
         <div className='flex gap-4 item-center justify-center'>
               <motion.a href='https://github.com/jithstephen13' whileHover={{y:-2}} target={'_blank' }><GithubIcon className={"text-white w-1rem w-1rem"}/></motion.a>
               <motion.a href='https://www.linkedin.com/in/jithstephen13/' whileHover={{y:-2}}  target={'_blank' }><LinkedInIcon className={"text-white w-1rem w-1rem"}/></motion.a>
-            
+
               <motion.a href='https://www.behance.net/jithstephen' whileHover={{y:-2}} target={'_blank' }> <Behance className={"text-white"}/></motion.a>
 
 
-              
-            </div> 
-              
+
+            </div>
+
       </div>
 
     </section></main></>

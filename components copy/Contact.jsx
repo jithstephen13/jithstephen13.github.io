@@ -15,6 +15,7 @@ import { Behance, GithubIcon, LinkedInIcon }  from "../components/SvgCompo/Svgic
 
 const Contact = () => {
   const [vantaEffect, setVantaEffect] = useState(0);
+  const [showPopup, setShowPopup] = useState(false);
   const vantaRef = useRef(null);
   const form = useRef();
   const [cred, setCred] = useState({});
@@ -36,7 +37,7 @@ const Contact = () => {
           shininess: 66.00,
           waveHeight: 17.50,
           waveSpeed: 1.20,
-          zoom: 0.84 
+          zoom: 0.84
         })
       );
     }
@@ -45,7 +46,7 @@ const Contact = () => {
     };
   }, [vantaEffect]);
 
-  
+
   const handlechenge = (e) => {
     const { name, value } = e.target;
     setCred({
@@ -72,7 +73,7 @@ const Contact = () => {
          console.log(result)
         },
         (error) => {
-         
+
         }
       );
 
@@ -87,18 +88,48 @@ const Contact = () => {
         Contact Me
           <hr className="w-6 h-1 mx-auto my-4 bg-black  border-0 rounded"></hr>
         </h1>
-        
+        <iframe
+  name="hidden_iframe"
+  style={{ display: "none" }}
+  onLoad={() => {
+    if (window.submitted) {
+      window.submitted = false;
+      alert("Message sent successfully ✅");
+
+    }
+  }}
+/>
+
         <div className="flex flex-col gap-2 w-11/12 md:w-5/12  m-auto mt-10">
-                        <form   ref={form}  className="flex flex-col w-11/12 gap-2 m-auto">
+                        <form
+                          action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeeFxLLB7SPWhDbVpgMDDkAYfAOw1ttWjZzFjzpp8rFPhYI3g/formResponse"
+                          method="POST"
+                          target="hidden_iframe"
+                          onSubmit={() => { window.submitted = true; }}
+                           className="flex flex-col w-11/12 gap-2 m-auto">
                         <label>Name</label>
-                        <input type="text" name="user_name"
-                                  onChange={handlechenge}  className="h-10" />
+                        <input
+                        type="text"
+                        //  name="user_name"
+                          name="entry.577166974"
+                                  // onChange={handlechenge}
+                                   className="h-10"
+                                  />
                         <label>Email</label>
-                        <input type="email" name="user_email"
-                                  onChange={handlechenge} className="h-10" />
+                        <input
+                         type="email"
+                          name="entry.1142341537"
+                        //  name="user_email"
+                                  // onChange={handlechenge}
+                                  className="h-10" />
                         <label>Message</label>
-                        <input type="text"  name="message" onChange={handlechenge} className=" h-40" />
-                        <button type="submit"  onClick={sendEmail}  className=" bg-blue-600
+                        <input type="text"
+                          name="entry.2116418071"
+                        //  onChange={handlechenge}
+                         className=" h-40" />
+                        <button type="submit"
+                        //  onClick={sendEmail}
+                          className=" bg-blue-600
                               hover:bg-purple-700   rounded-sm py-2 px-2 rounded-full-50%
                               hover:text-black transition duration-200 mt-10 mb-10
                               font-playfair text-center cursor-pointer  " >sent</button>
@@ -119,16 +150,16 @@ const Contact = () => {
         <div className='flex gap-4 item-center justify-center'>
               <motion.a href='https://github.com/jithstephen13' whileHover={{y:-2}} target={'_blank' }><GithubIcon className={"text-white w-1rem w-1rem"}/></motion.a>
               <motion.a href='https://www.linkedin.com/in/jithstephen13/' whileHover={{y:-2}}  target={'_blank' }><LinkedInIcon className={"text-white w-1rem w-1rem"}/></motion.a>
-            
+
               <motion.a href='https://www.behance.net/jithstephen' whileHover={{y:-2}} target={'_blank' }> <Behance className={"text-white"}/></motion.a>
 
 
-              
-            </div> 
-              
+
+            </div>
+
       </div>
-              
-    
+
+
     </section>
   )
 }
