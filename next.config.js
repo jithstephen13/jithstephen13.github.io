@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // <--- ADD THIS LINE
+  // Keep this for newer compatibility
+  output: 'export',
   reactStrictMode: true,
   images: {
     unoptimized: true,
@@ -8,14 +9,12 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'res.cloudinary.com',
-        port: '',
-        pathname: '/**', // Fixed: added leading slash
+        pathname: '/**',
       },
     ],
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  // Ensure trailing slashes are handled for GitHub Pages
+  trailingSlash: true,
 }
 
 module.exports = nextConfig
