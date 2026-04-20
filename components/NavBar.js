@@ -18,11 +18,11 @@ const NAV_ITEMS= [
       label: "About",
       page: "about",
     },
-  
+
     {
       label: "Skills",
       page: "skills",
-    }, 
+    },
     {
       label: "Projects",
       page: "projects",
@@ -64,18 +64,18 @@ export const Navbar = () => {
             </div>
 
             <nav className='hidden md:flex gap-4 item-top justify-center'>
-            <a href="https://drive.google.com/uc?export=download&id=1RpHZgTgGbC4Y5xsCedBbqq_YIL-hFUYh">
-               <button  onClick={() => openInNewTab("https://drive.google.com/file/d/1RpHZgTgGbC4Y5xsCedBbqq_YIL-hFUYh/view?usp=sharing")} className=" bg-blue-600 rounded-sm py-1 rounded-full-50% hover:bg-purple-700 hover:text-white transition duration-200 
+            <a href="https://drive.google.com/uc?export=download&id=1ehDoi5WD0w0hR0qPC5wuJqW8WzBqDmwk">
+               <button  onClick={() => openInNewTab("https://drive.google.com/file/d/1ehDoi5WD0w0hR0qPC5wuJqW8WzBqDmwk/view?usp=sharing")} className=" bg-blue-600 rounded-sm py-1 rounded-full-50% hover:bg-purple-700 hover:text-white transition duration-200
                                                           font-playfair px-2 bg-red">
                 <h4> Resume </h4>
                    </button>
                </a>
-            
+
               <motion.a href='https://github.com/jithstephen13' whileHover={{y:-2}} target={'_blank' }><GithubIcon className={"text-white w-1rem w-1rem"}/></motion.a>
               <motion.a href='https://www.linkedin.com/in/jithstephen13/' whileHover={{y:-2}}  target={'_blank' }><LinkedInIcon className={"text-white w-1rem w-1rem"}/></motion.a>
-            
+
              <motion.a href='https://www.behance.net/jithstephen' whileHover={{y:-2}} target={'_blank' }> <Behance className={"text-white"}/></motion.a>
-             
+
 
             </nav>
 
@@ -94,32 +94,32 @@ export const Navbar = () => {
                   <LinkCompo key={idx}   {...item}/>
                 )
               })}
-              
-            
+
+
              <nav className='flex md:hidden gap-4 item-top justify-center'>
-              
-            <a href="https://drive.google.com/uc?export=download&id=1RpHZgTgGbC4Y5xsCedBbqq_YIL-hFUYh">
-               <button onClick={() => openInNewTab("https://drive.google.com/file/d/1RpHZgTgGbC4Y5xsCedBbqq_YIL-hFUYh/view?usp=sharing")} className=" bg-blue-600 rounded-sm py-1 rounded-full-50% hover:bg-purple-700 hover:text-white transition duration-200 
+
+            <a href="https://drive.google.com/uc?export=download&id=1ehDoi5WD0w0hR0qPC5wuJqW8WzBqDmwk">
+               <button onClick={() => openInNewTab("https://drive.google.com/file/d/1ehDoi5WD0w0hR0qPC5wuJqW8WzBqDmwk/view?usp=sharing")} className=" bg-blue-600 rounded-sm py-1 rounded-full-50% hover:bg-purple-700 hover:text-white transition duration-200
                                                           font-playfair px-2 bg-red">
                 <h4> Resume </h4>
                    </button>
                </a>
-            
+
               <motion.a href='https://github.com/jithstephen13' whileHover={{y:-2}} target={'_blank' }><GithubIcon className={"text-white w-1rem w-1rem"}/></motion.a>
               <motion.a href='https://www.linkedin.com/in/jithstephen13/' whileHover={{y:-2}}  target={'_blank' }><LinkedInIcon className={"text-white w-1rem w-1rem"}/></motion.a>
-            
+
              <motion.a href='https://www.behance.net/jithstephen' whileHover={{y:-2}} target={'_blank' }> <Behance className={"text-white"}/></motion.a>
-             
+
 
             </nav>
 
-               
+
             </div>
-            
-          </div> 
-         
+
+          </div>
+
         </div>
-        
+
     </header>
   )
 }

@@ -40,7 +40,7 @@ export default function Home() {
 
 
  const handleResume=()=>{
-      window.location.href="https://drive.google.com/file/d/1RpHZgTgGbC4Y5xsCedBbqq_YIL-hFUYh/view?usp=sharing"
+      window.location.href="https://drive.google.com/file/d/1ehDoi5WD0w0hR0qPC5wuJqW8WzBqDmwk/view?usp=sharing"
     }
   return (
     <>
@@ -78,8 +78,8 @@ export default function Home() {
           </p>
 
                <div className="flex flex-row  items-center justify-center  space-x-2 mb-1 mt-20">
-                <a href="https://drive.google.com/uc?export=download&id=1RpHZgTgGbC4Y5xsCedBbqq_YIL-hFUYh">
-               <button onClick={() => openInNewTab("https://drive.google.com/file/d/1RpHZgTgGbC4Y5xsCedBbqq_YIL-hFUYh/view?usp=sharing")}  className=" bg-blue-600 rounded-sm py-2 px-2 rounded-full-50%
+                <a href="https://drive.google.com/uc?export=download&id=1ehDoi5WD0w0hR0qPC5wuJqW8WzBqDmwk">
+               <button onClick={() => openInNewTab("https://drive.google.com/file/d/1ehDoi5WD0w0hR0qPC5wuJqW8WzBqDmwk/view?usp=sharing")}  className=" bg-blue-600 rounded-sm py-2 px-2 rounded-full-50%
                                                           hover:bg-purple-700 hover:text-white transition duration-200
                                                           font-playfair px-8 bg-red">
                 <h4> Resume </h4>

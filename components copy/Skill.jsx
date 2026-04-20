@@ -1,48 +1,17 @@
 "use client"
-import React, { useEffect, useRef, useState } from "react"
+import React from "react"
 import Image from "next/image"
 import GitHubCalendar from "react-github-calendar"
 import ParallaxEfect from "./ParllaxEfect"
-import NET from "vanta/dist/vanta.net.min";
-import * as THREE from "three";
+
 
 function Skills() {
-  const vantaRef = useRef(null)
-
-  useEffect(() => {
-    let effect
-
-    if (typeof window !== "undefined") {
-      effect = NET({
-        el: vantaRef.current,
-        THREE,
-        mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  scaleMobile: 1.00,
-  points:10.00,
-  maxDistance:20.00,
-  spacing:15.00,
-  showDots:false,
-
-        backgroundColor: 0x8a73ff,
-        color: 0xff3f81,
 
 
-      })
-    }
 
-    return () => {
-      if (effect) effect.destroy()
-    }
-  }, [])
 
   return (
     <section
-    ref={vantaRef}
     id="skills"
     className="relative w-full max-w-full overflow-hidden"
   >

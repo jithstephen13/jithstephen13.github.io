@@ -20,11 +20,11 @@ const NAV_ITEMS= [
                 label: "About",
                 page: "about",
               },
-            
+
               {
                 label: "Skills",
                 page: "Skills",
-              }, 
+              },
               {
                 label: "Projects",
                 page: "Projects",
@@ -39,26 +39,26 @@ export default function Navbar() {
   const { systemTheme, theme, setTheme } = useTheme()
   const currentTheme = theme === "system" ? systemTheme : theme
   const [navbar, setNavbar] = useState(false)
- 
+
 
   const handleResume=()=>{
-    window.location.href="https://drive.google.com/file/d/1RpHZgTgGbC4Y5xsCedBbqq_YIL-hFUYh/view?usp=sharing"
+    window.location.href="https://drive.google.com/file/d/1ehDoi5WD0w0hR0qPC5wuJqW8WzBqDmwk/view?usp=sharing"
   }
   return (
-    <header  className="w-full mx-auto py-0 px-4 sm:px-20 fixed text-white top-0 z-50 shadow bg-black dark:bg-stone-900 dark:border-b 
+    <header  className="w-full mx-auto py-0 px-4 sm:px-20 fixed text-white top-0 z-50 shadow bg-black dark:bg-stone-900 dark:border-b
                         dark:border-stone-600">
       <div className="justify-between  items-center md:items-center md:flex">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
             <Link to="home">
               <div className="container flex items-center justify-center space-x-2">
-             
+
               <Image
               src="/jithlogo.67171ca21e0f39829edf.png"
               alt="logo"
               width={50}
               height={50}
-            
+
             />
               </div>
             </Link>
@@ -72,7 +72,7 @@ export default function Navbar() {
               {currentTheme === "dark" ? (
                 <button
                   onClick={() => setTheme("light")}
-                  className="bg-slate-100 p-2 rounded-xl text-black" 
+                  className="bg-slate-100 p-2 rounded-xl text-black"
                 >
                   <RiSunLine size={25} className="text-black" />
                 </button>
@@ -114,10 +114,10 @@ export default function Navbar() {
                   </Link>
                 )
               })}
-              
-            
-             
-               <a href="https://drive.google.com/uc?export=download&id=1RpHZgTgGbC4Y5xsCedBbqq_YIL-hFUYh">
+
+
+
+               <a href="https://drive.google.com/uc?export=download&id=1ehDoi5WD0w0hR0qPC5wuJqW8WzBqDmwk">
                <button onClick={handleResume} className="bg-blue-600
                 hover:bg-purple-700   rounded-sm py-2 px-2 rounded-full-50%
                  hover:text-black transition duration-200 mt-5 mb-5
@@ -141,12 +141,12 @@ export default function Navbar() {
                 >
                   <RiMoonFill size={25} color="black" />
                 </button>
-              )}     
+              )}
                </div>
             </div>
-            
-          </div> 
-         
+
+          </div>
+
         </div>
       </div>
     </header>

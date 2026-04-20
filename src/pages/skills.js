@@ -11,14 +11,14 @@ const skills = () => {
     <Head>
       <title>Jith Stephen</title>
       <meta name="description" content="jith stephen portfolio" />
-      
+
     </Head>
     <main  >
     <TransitionEfect/>
     <section id="Skills">
     <div className="my-12 pb-12 md:pt-16 md:pb-48 flex flex-col">
       <h1 className="text-center font-bold text-4xl">
-         
+
         <AnimatedText text="skills" />
         <hr className="w-6 h-1 mx-auto my-4 bg-black border-0 rounded"></hr>
       </h1>
@@ -150,12 +150,12 @@ const skills = () => {
           className="rounded-full ml-10 mr-10 bg-white shadow-2xl"
         />
           </div>
-          
-         
-          
-          
 
-          
+
+
+
+
+
       </div>
       <div className="flex flex-col justify-center align-center   animate-slideUpCubiBezier animation-delay-2 md:space-x-12 p-6 mt-12 shadow-2xl m-auto">
          <GitHubCalendar username="swati082001" />
@@ -167,11 +167,11 @@ const skills = () => {
          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jithstephen13&langs_count=8" className="m-auto h-72 mt-6" width={"60%"}  alt=''/>
 
          </div>
-          
-      </div>
-     
 
-      
+      </div>
+
+
+
     </div>
   </section></main></>
   )

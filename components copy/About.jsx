@@ -10,18 +10,21 @@ const About = () => {
 
         <div className="flex flex-col space-y-10 items-stretch justify-center align-top p-2 md:space-x-10 md:space-y-0 md:p-4 md:flex-row text-center">
           <div className="md:w-1/2 flex flex-col justify-center">
-            
+
             <p>
               Hi, my name is <span className="font-bold text-purple-700">Jith</span>  and I am a{" "}
               <span className="font-bold text-purple-700">{"highly ambitious "}</span>,
               <span className="font-bold text-purple-700">{" self-motivated"}</span>, and
-               
+
                <span className="font-bold text-purple-700">Full Stack Web Developer</span>
             </p>
             <br />
             <p>
-              I complted Full Stack Web Developer from Masai School having 1200 hr Coding experience.and looking to enhance my professional experience with an IT company specializing in web development. I am armed with a deep sense of responsibility and enthusiasm to give 110% for any endeavor.
-            </p>
+            Frontend Developer with 2+ years of experience building fast, secure, and user-friendly
+web applications using React.js. Expert in Redux Toolkit, JavaScript/ES6+, and modern
+frontend tooling, with a proven track record of delivering responsive interfaces for
+platforms serving 10M+ users. Passionate about writing clean code, improving UX, and
+building products that make a real impact            </p>
             <br />
             <p>
               I have a wide range of hobbies and passions that keep me busy.
@@ -39,9 +42,9 @@ const About = () => {
               possible. I am excited to see where my career takes me and am
               always open to new opportunities.
             </p>
-            
+
           </div>
-         
+
         </div>
       </div>
     </section>

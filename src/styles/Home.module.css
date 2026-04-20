@@ -285,7 +285,7 @@
   white-space: nowrap;
   display: flex;
   flex-wrap: nowrap;
-  
+
 }
 
 .parallax .scroller {
@@ -299,10 +299,10 @@
   gap: 10px;
 }
 .parallax span {
-  
+
   margin-right: 30px;
-  
- 
+
+
 }
 
 
