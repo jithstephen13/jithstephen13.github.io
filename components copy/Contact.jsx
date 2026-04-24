@@ -1,51 +1,14 @@
 "use client"
-import { useEffect, useRef, useState } from "react";
-import NET from "vanta/dist/vanta.waves.min";
-import * as THREE from "three";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Socialmedia } from "./Socialmedia";
-
 import {motion} from "framer-motion"
 import Image from "next/image";
-
 import { Behance, GithubIcon, LinkedInIcon }  from "../components/SvgCompo/Svgicons";
 
-
-
-
 const Contact = () => {
-  const [vantaEffect, setVantaEffect] = useState(0);
-  const [showPopup, setShowPopup] = useState(false);
-  const vantaRef = useRef(null);
   const form = useRef();
   const [cred, setCred] = useState({});
-
-  useEffect(() => {
-    if (!vantaEffect) {
-      setVantaEffect(
-        NET({
-          el: vantaRef.current,
-          THREE,
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 200.00,
-          minWidth: 200.00,
-          scale: 1.00,
-          scaleMobile: 1.00,
-          color: 0x4f4f4f,
-          shininess: 66.00,
-          waveHeight: 17.50,
-          waveSpeed: 1.20,
-          zoom: 0.84
-        })
-      );
-    }
-    return () => {
-      if (vantaEffect) vantaEffect.destory();
-    };
-  }, [vantaEffect]);
-
 
   const handlechenge = (e) => {
     const { name, value } = e.target;
@@ -54,9 +17,6 @@ const Contact = () => {
       [name]: value,
     });
   };
-
-
-
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -80,86 +40,84 @@ const Contact = () => {
     form.current.reset();
   };
 
-
   return (
-    <section ref={vantaRef} className={'p-0 m-0'} id="contact">
-      <div className="my-12 pb-12 md:pt-20 md:pb-48">
-        <h1 className="text-center font-bold text-4xl">
-        Contact Me
-          <hr className="w-6 h-1 mx-auto my-4 bg-black  border-0 rounded"></hr>
-        </h1>
-        <iframe
-  name="hidden_iframe"
-  style={{ display: "none" }}
-  onLoad={() => {
-    if (window.submitted) {
-      window.submitted = false;
-      alert("Message sent successfully ✅");
-
-    }
-  }}
-/>
-
-        <div className="flex flex-col gap-2 w-11/12 md:w-5/12  m-auto mt-10">
-                        <form
-                          action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeeFxLLB7SPWhDbVpgMDDkAYfAOw1ttWjZzFjzpp8rFPhYI3g/formResponse"
-                          method="POST"
-                          target="hidden_iframe"
-                          onSubmit={() => { window.submitted = true; }}
-                           className="flex flex-col w-11/12 gap-2 m-auto">
-                        <label>Name</label>
-                        <input
-                        type="text"
-                        //  name="user_name"
-                          name="entry.577166974"
-                                  // onChange={handlechenge}
-                                   className="h-10"
-                                  />
-                        <label>Email</label>
-                        <input
-                         type="email"
-                          name="entry.1142341537"
-                        //  name="user_email"
-                                  // onChange={handlechenge}
-                                  className="h-10" />
-                        <label>Message</label>
-                        <input type="text"
-                          name="entry.2116418071"
-                        //  onChange={handlechenge}
-                         className=" h-40" />
-                        <button type="submit"
-                        //  onClick={sendEmail}
-                          className=" bg-blue-600
-                              hover:bg-purple-700   rounded-sm py-2 px-2 rounded-full-50%
-                              hover:text-black transition duration-200 mt-10 mb-10
-                              font-playfair text-center cursor-pointer  " >sent</button>
-                        </form>
-        </div>
-         <div className="flex flex-col justify-center items-center text-white">
-         <a href = "mailto: jithstephen96@gmail.com"> <div className=" flex gap-2"> <Image  alt="pro"
-            width={25}
-            height={25} src="https://res.cloudinary.com/dqgeth8jx/image/upload/v1681718204/portfolio/email_rnmp9t.png" /> <p>Send Email</p></div> </a>
-         <a href="tel:+919526272502">  <div className=" flex  gap-2"> <Image  alt="pro"
-            width={25}
-            height={25} src="https://res.cloudinary.com/dqgeth8jx/image/upload/v1681718204/portfolio/telephone_kclste.png" /> <p>+91 9526272502</p></div></a>
-         <p>wayanad,kerala</p>
-
-         </div>
-        <hr className="w-6 h-1 mx-auto my-4 bg-black  border-0 rounded"></hr>
-
-        <div className='flex gap-4 item-center justify-center'>
-              <motion.a href='https://github.com/jithstephen13' whileHover={{y:-2}} target={'_blank' }><GithubIcon className={"text-white w-1rem w-1rem"}/></motion.a>
-              <motion.a href='https://www.linkedin.com/in/jithstephen13/' whileHover={{y:-2}}  target={'_blank' }><LinkedInIcon className={"text-white w-1rem w-1rem"}/></motion.a>
-
-              <motion.a href='https://www.behance.net/jithstephen' whileHover={{y:-2}} target={'_blank' }> <Behance className={"text-white"}/></motion.a>
-
-
-
+    <section className={'relative z-10 text-gray-300 w-full max-w-7xl mx-auto px-6 md:px-12 py-24'} id="contact">
+      <div className="border-t border-gray-800 pt-16 mt-8">
+        <div className="flex flex-col md:flex-row gap-16 md:gap-24 mb-16">
+          <div className="md:w-1/2 flex flex-col">
+            <h1 className="font-black text-5xl md:text-7xl text-white uppercase tracking-wider mb-8 text-center md:text-left">
+              Let's <span className="text-primary">Connect</span>
+            </h1>
+            <p className="text-lg text-gray-400 mb-8 max-w-md">
+              Have a project in mind or just want to say hi? I'd love to hear from you. Drop me a message and let's create something extraordinary.
+            </p>
+            <div className="flex flex-col text-white space-y-6">
+              <a href="mailto:jithstephen96@gmail.com" className="hover:text-primary transition-colors group flex gap-4 items-center"> 
+                <Image alt="email" width={24} height={24} src="https://res.cloudinary.com/dqgeth8jx/image/upload/v1681718204/portfolio/email_rnmp9t.png" className="group-hover:scale-110 transition-transform"/> 
+                <p className="text-xl">jithstephen96@gmail.com</p>
+              </a>
+              <a href="tel:+919526272502" className="hover:text-primary transition-colors group flex gap-4 items-center">  
+                <Image alt="phone" width={24} height={24} src="https://res.cloudinary.com/dqgeth8jx/image/upload/v1681718204/portfolio/telephone_kclste.png" className="group-hover:scale-110 transition-transform"/> 
+                <p className="text-xl">+91 9526272502</p>
+              </a>
+              <p className="text-gray-400 text-lg mt-4 uppercase tracking-widest text-sm">Wayanad, Kerala</p>
             </div>
+            
+            <div className='flex gap-8 mt-12'>
+              <motion.a href='https://github.com/jithstephen13' whileHover={{y:-5, scale: 1.1}} target={'_blank' }><GithubIcon className={"text-primary w-8 h-8"}/></motion.a>
+              <motion.a href='https://www.linkedin.com/in/jithstephen13/' whileHover={{y:-5, scale: 1.1}} target={'_blank' }><LinkedInIcon className={"text-primary w-8 h-8"}/></motion.a>
+              <motion.a href='https://www.behance.net/jithstephen' whileHover={{y:-5, scale: 1.1}} target={'_blank' }> <Behance className={"text-primary w-8 h-8"}/></motion.a>
+            </div>
+          </div>
 
+          <div className="md:w-1/2 mt-12 md:mt-0">
+            <iframe
+              name="hidden_iframe"
+              style={{ display: "none" }}
+              onLoad={() => {
+                if (window.submitted) {
+                  window.submitted = false;
+                  alert("Message sent successfully ✅");
+                }
+              }}
+            />
+            <form
+              action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeeFxLLB7SPWhDbVpgMDDkAYfAOw1ttWjZzFjzpp8rFPhYI3g/formResponse"
+              method="POST"
+              target="hidden_iframe"
+              onSubmit={() => { window.submitted = true; }}
+              className="flex flex-col gap-6 w-full">
+              <div className="flex flex-col gap-2">
+                <label className="text-xs text-gray-400 font-bold uppercase tracking-widest">Your Name</label>
+                <input
+                  type="text"
+                  name="entry.577166974"
+                  className="h-14 bg-dark/60 text-white border-2 border-gray-800 focus:border-primary px-4 outline-none rounded-md transition-colors"
+                />
+              </div>
+              <div className="flex flex-col gap-2">
+                <label className="text-xs text-gray-400 font-bold uppercase tracking-widest">Email Address</label>
+                <input
+                  type="email"
+                  name="entry.1142341537"
+                  className="h-14 bg-dark/60 text-white border-2 border-gray-800 focus:border-primary px-4 outline-none rounded-md transition-colors" 
+                />
+              </div>
+              <div className="flex flex-col gap-2">
+                <label className="text-xs text-gray-400 font-bold uppercase tracking-widest">Message</label>
+                <textarea 
+                  name="entry.2116418071"
+                  className="h-40 bg-dark/60 text-white border-2 border-gray-800 focus:border-primary p-4 outline-none rounded-md resize-none transition-colors" 
+                />
+              </div>
+              <button type="submit"
+                className="bg-primary text-dark font-black text-sm uppercase tracking-widest rounded py-4 px-8 hover:bg-white transition-all duration-300 mt-4 w-full md:w-auto self-start">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
-
-
     </section>
   )
 }

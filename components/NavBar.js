@@ -43,7 +43,7 @@ export const Navbar = () => {
 
 
   return (
-    <header className='flex items-center justify-between bg-dark py-6 px-8 sticky top-0 relative z-10'>
+    <header className='flex items-center justify-between bg-transparent backdrop-blur-sm py-6 px-8 sticky top-0 relative z-20'>
             <Logo/>
             <nav className='hidden md:flex gap-8 pl-14'>
 

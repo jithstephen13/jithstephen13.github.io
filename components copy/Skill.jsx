@@ -13,12 +13,11 @@ function Skills() {
   return (
     <section
     id="skills"
-    className="relative w-full max-w-full overflow-hidden"
+    className="relative w-full overflow-hidden text-gray-300 z-10 max-w-7xl mx-auto px-6 md:px-12 py-24"
   >
-   <div className="my-12 pb-12 md:pt-16 md:pb-48 flex flex-col">
-        <h1 className="text-center font-bold text-4xl">
-          skills
-          <hr className="w-6 h-1 mx-auto my-4 bg-black border-0 rounded"></hr>
+      <div className="flex flex-col border-t border-gray-800 pt-16 mt-8">
+        <h1 className="font-black text-5xl md:text-7xl text-white uppercase tracking-wider mb-12 text-center md:text-left">
+          My <span className="text-primary">Skills</span>
         </h1>
  <ParallaxEfect baseVelocity={-2}>
         <div className="flex gap-12 m-auto overflow-hidden ">
