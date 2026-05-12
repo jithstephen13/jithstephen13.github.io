@@ -10,6 +10,7 @@ import { allProjects } from "../src/data/projectsData"
 const selfProjects = allProjects.filter(p => p.type === "SELF PROJECTS");
 const realWorldProjects = allProjects.filter(p => p.type === "REAL WORLD");
 const articles = allProjects.filter(p => p.type === "ARTICLES");
+const certificate = allProjects.filter(p => p.type === "CERTIFICATE");
 
 const Projects = () => {
   const { systemTheme, theme } = useTheme()
@@ -21,14 +22,15 @@ const Projects = () => {
     { id: 0, name: "ALL PROJECTS", data: [...realWorldProjects, ...selfProjects, ...articles] },
     { id: 1, name: "REAL WORLD", data: realWorldProjects },
     { id: 2, name: "SELF PROJECTS", data: selfProjects },
-    { id: 3, name: "ARTICLES", data: articles }
+    { id: 3, name: "ARTICLES", data: articles },
+    { id: 4, name: "CERTIFICATE", data: certificate }
   ]
 
   const activeData = tabs[currentTab].data
 
   return (
     <section id="projects" className="relative z-10 text-gray-300 w-full max-w-7xl mx-auto px-6 md:px-12 py-24">
-      
+
       {/* Header aligned like Melvin Thambi's */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 border-b border-gray-800 pb-8">
         <h1 className="font-black text-5xl md:text-7xl text-white uppercase tracking-wider mb-8 md:mb-0">
@@ -41,7 +43,7 @@ const Projects = () => {
             <button
               key={item.id}
               onClick={() => setCurrentTab(item.id)}
-              className={`font-semibold tracking-wide uppercase transition-colors duration-300 text-sm md:text-base border-b-2 
+              className={`font-semibold tracking-wide uppercase transition-colors duration-300 text-sm md:text-base border-b-2
               ${item.id === currentTab ? "text-primary border-primary" : "text-gray-500 border-transparent hover:text-white"}`}
             >
               {item.name}
@@ -55,7 +57,7 @@ const Projects = () => {
         {activeData.map((item, idx) => (
           <SlideUp key={idx}>
             <div className="flex flex-col group cursor-pointer text-left">
-              
+
               {/* Image Container with portrait aspect ratio */}
               <div className="relative w-full aspect-[4/5] overflow-hidden rounded-md bg-gray-900 shadow-xl mb-6">
                 <Image
