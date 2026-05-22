@@ -126,6 +126,28 @@ export const allProjects = [
     git: "#"
   },
   {
+    id: "react-query-tanstack-query-v5",
+    type: "CERTIFICATE",
+    name: "React Query / TanStack Query v5",
+    imag: "https://res.cloudinary.com/dqgeth8jx/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1779443113/portfolio/UC-924caae6-5501-4fae-ac92-6054e6640b27_iqalim.jpg",
+    dsc: "Comprehensive React Query (TanStack Query v5) course covering server-state management, queries, mutations, caching, pagination, infinite scroll, optimistic updates, authentication integration, and testing in React applications.",
+    tech: [
+      "React Query",
+      "TanStack Query v5",
+      "React",
+      "TypeScript",
+      "Caching",
+      "Pagination",
+      "Infinite Scroll",
+      "Optimistic Updates",
+      "Authentication",
+      "Testing"
+    ],
+    Responsibility: "Server State Management & API Data Handling",
+    dep: "https://www.udemy.com/certificate/UC-924caae6-5501-4fae-ac92-6054e6640b27/",
+    git: "#"
+  },
+  {
 
     id: "full-stack-web-development",
 
